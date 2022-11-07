@@ -1,52 +1,59 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Calculator</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-  
+  <title>Calculator </title>
+
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <h1 class="text-center">Calculator</h1>
-  <div class="container flex flex-col items-center mx-auto m-w-20 ">
-    <div class="row">
-      <input class="input" type="text"/>
+
+    <div class="calculator ">
+      <input type="text" class="display" id="display-input">
+      <div class="row">
+        <button value="C"  onclick="clr()">C</button>
+        <button value="C"  onclick="clearHistory()" id="clear">CL</button>
+        <button value="(" onclick="disply('')">(</button>
+        <button value=")" onclick="disply('8')">)</button>
+      </div>
+      <div class="row">
+        <button value="7" onclick="disply('7')">7</button>
+        <button value="8" onclick="disply('8')">8</button>
+        <button value="9" onclick="disply('9')">9</button>
+        <button value="+" onclick="disply('+')" class="numeric-operators">+</button>
+      </div>
+      <div class="row">
+        <button value="4" onclick="disply('4')">4</button>
+        <button value="5" onclick="disply('5')">5</button>
+        <button value="6" onclick="disply('6')">6</button>
+        <button value="-" onclick="disply('-')" class="numeric-operators">-</button>
+      </div>
+      <div class="row">
+        <button value="1" onclick="disply('1')">1</button>
+        <button value="2" onclick="disply('2')">2</button>
+        <button value="3" onclick="disply('3')">3</button>
+        <button value="*" onclick="disply('*')" class="numeric-operators">*</button>
+      </div>
+      <div class="row">
+        <button value="0" onclick="disply('0')">0</button>
+        <button value="." onclick="disply('.')">.</button>
+        <button value="=" class="equals" onclick="solve()">=</button>
+        <button value="/" onclick="disply('/')" class="numeric-operators">/</button>
+        
+        
+      </div>
+      <div class="row bg-light history-clr">
+       
+        <div class="col-lg-12 "  id="historyLog">
+
+        </div>
+      </div>
     </div>
-    <div class="row ">
-      <button class="button top-row-clr">C</button>
-      <button class="button top-row-clr">%</button>
-      <button class="button top-row-clr">(</button>
-      <button class="button right-row-clr">)</button>
-    </div>
-    <div class="row">
-      <button class="button other-btn-clr">7</button>
-      <button class="button other-btn-clr">8</button>
-      <button class="button other-btn-clr">9</button>
-      <button class="button right-row-clr">/</button>
-    </div>
-    <div class="row">
-      <button class="button other-btn-clr">4</button>
-      <button class="button other-btn-clr">5</button>
-      <button class="button other-btn-clr">6</button>
-      <button class="button right-row-clr ">x</button>
-    </div>
-    <div class="row">
-      <button class="button other-btn-clr">1</button>
-      <button class="button other-btn-clr">2</button>
-      <button class="button other-btn-clr">3</button>
-      <button class="button right-row-clr">-</button>
-    </div>
-    <div class="row">
-      <button class="button other-btn-clr">0</button>
-      <button class="button other-btn-clr">.</button>
-      <button class="button other-btn-clr">=</button>
-      <button class="button right-row-clr">+</button>
-    </div>
-  </div>
-  <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+
 </body>
 
 </html>
